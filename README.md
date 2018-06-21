@@ -49,6 +49,41 @@
 └── package.json
 ```
 
+## 使用
+#### 开发环境
+```bash
+// 开启服务
+$ npm run dev
+```
+#### 测试环境
+```bash
+// 开启服务
+$ npm run test-start
+// 停止服务
+$ npm run test-stop
+// 重启服务
+$ npm run test-restart
+// 查看日志
+$ npm run test-logs
+// 查看资源使用
+$ npm run test-monit
+```
+
+#### 生产环境
+```bash
+// 开启服务
+$ npm start
+// 停止服务
+$ npm run stop
+// 重启服务
+$ npm run restart
+// 查看日志
+$ npm run logs
+// 查看资源使用
+$ npm run monit
+```
+>>> 根据项目名称将 pm2 的服务命名 `nodeMiddleware` 改为 自己项目的名称
+
 ## 测试
 ```bash
 // 开启服务
