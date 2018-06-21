@@ -1,15 +1,11 @@
 const Koa = require('koa')
-// const c2k = require('koa2-connect')
 const path = require('path')
-// const proxy = require('http-proxy-middleware')
 const koaBody = require('koa-body')
-// const logger = require('koa-logger')
 const router = require('./routes')
-// const convert = require('koa-convert')
 const serve = require('koa-static')
 const cors = require('koa2-cors')
 const config = require('../config/config')
-const api = require('./middlewares/api')
+const api = require('koa2-api')
 
 const { env, port } = config
 
@@ -29,7 +25,7 @@ app.use(cors({
   allowHeaders: ['Content-Type', 'Authorization', 'Accept', 'X-Requested-With'],
 }))
 
-app.use(api)
+app.use(api())
 
 // 静态资源
 app.use(serve(path.join(__dirname, '../public/assets')))
