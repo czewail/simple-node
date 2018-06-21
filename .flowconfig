@@ -1,0 +1,15 @@
+[ignore]
+.*/node_modules/.*
+.*/log/.*
+
+[include]
+
+[libs]
+flow
+
+[lints]
+
+[options]
+suppress_comment= \\(.\\|\n\\)*\\$flow-disable-line
+
+[strict]
