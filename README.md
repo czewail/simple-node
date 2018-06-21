@@ -82,7 +82,7 @@ $ npm run logs
 // 查看资源使用
 $ npm run monit
 ```
->>> 根据项目名称将 pm2 的服务命名 `nodeMiddleware` 改为 自己项目的名称
+> 根据项目名称将 pm2 的服务命名 `nodeMiddleware` 改为 自己项目的名称
 
 ## 测试
 ```bash
