@@ -1,18 +1,19 @@
 const Koa = require('koa')
 const path = require('path')
 const koaBody = require('koa-body')
-const router = require('./routes')
 const serve = require('koa-static')
 const cors = require('koa2-cors')
-const config = require('../config/config')
 const api = require('koa2-api')
+const config = require('../config/config')
+const router = require('./routes')
 
 const { env, port } = config
 
 const app = new Koa()
 
-// 解析请求的 body
+// 中间件
 app.use(koaBody())
+app.use(api())
 
 // 跨域访问
 app.use(cors({
@@ -24,8 +25,6 @@ app.use(cors({
   allowMethods: ['GET', 'POST', 'DELETE', 'PATCH', 'PUT', 'OPTIONS'],
   allowHeaders: ['Content-Type', 'Authorization', 'Accept', 'X-Requested-With'],
 }))
-
-app.use(api())
 
 // 静态资源
 app.use(serve(path.join(__dirname, '../public/assets')))

@@ -29,7 +29,6 @@
 │   │   └── ExampleController.js
 │   ├── index.js
 │   ├── middlewares // 中间层
-│   │   ├── api.js
 │   │   └── proxy.js
 │   ├── routes // 路由层
 │   │   ├── _proxy.js
@@ -43,7 +42,6 @@
 │   ├── database.js
 │   └── proxy.js
 ├── log // pm2 运行日志
-│   └── questionnaire.log
 ├── nodemon.json
 ├── package-lock.json
 └── package.json

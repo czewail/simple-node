@@ -3,7 +3,7 @@
  */
 
 /** 示例服务层模块 */
-const ExampleService = require('../services/example')
+const ExampleService = require('../services/Example')
 
 /**
  * 示例资源控制器

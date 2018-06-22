@@ -4,7 +4,7 @@ const Mock = require('mockjs')
 
 const pageSize = 20
 
-class exampleService {
+class ExampleService {
   // 获取列表
   static async getItems() {
     // 通过 superagent 调用服务接口
@@ -33,4 +33,4 @@ class exampleService {
   }
 }
 
-module.exports = exampleService
+module.exports = ExampleService
