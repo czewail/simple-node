@@ -32,12 +32,12 @@ describe('RESOURCE RESTAPI TEST', () => {
   // 测试-新增指定资源
   it('REQUEST: POST With Store', () => {
     const p = new Promise((resolve) => {
-      request.get('http://localhost:5100/examples', (err, res) => {
+      request.post('http://localhost:5100/examples', (err, res) => {
         resolve(res)
       })
     })
     return p.then(res => {
-      expect(res.statusCode).toBe(200)
+      expect(res.statusCode).toBe(201)
     })
   })
 
@@ -58,7 +58,7 @@ describe('RESOURCE RESTAPI TEST', () => {
   })
 
 
-  // 测试-新增指定资源
+  // 测试-删除指定资源
   it('REQUEST: DELETE With Destory', () => {
     const p = new Promise((resolve) => {
       request.delete('http://localhost:5100/examples/1', (err, res) => {
